@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="../home.css">
+  <link rel="stylesheet" href="contact.css">
+  
+</head>
+<body>
+   <header>
+        <nav class="header-wrapper">
+            <div class="msg-wrapper">Welcome to our Task management App</div>
+            <!-- Hamburger menu icon -->
+            <div class="hamburger" id="hamburger">
+                &#9776;
+            </div>
+            <ul id="nav-list">
+              <li><a href="../index.html">Home</a></li>
+                  <li><a href="/client/about/about.html">About</a></li>
+                <li><a href="/client/tasks/tasks.html">Tasks</a></li>
+              
+                <li><a href="/client/contact/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <form id="contact-form" action="#" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="success-message" class="hidden">Message sent successfully!</div>
+    <div id="error-message" class="hidden">Error sending message. Please try again later.</div>
+  </div>
+  <footer class="footer-wrapper">
+        <p>&copy; 2024 All rights reserved</p>
+    </footer>
+  <script src="contact.js"></script>
+  <script src="../home.js"></script>
+
+</body>
+</html>

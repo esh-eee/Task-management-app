@@ -1,0 +1,59 @@
+body, h1, ul, li, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #555;
+}
+
+.task-descriptor {
+    line-height: 1.8;
+}
+
+.task-descriptor p {
+    margin-bottom: 15px;
+}
+
+.task-descriptor ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.task-descriptor ul li {
+    margin-bottom: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

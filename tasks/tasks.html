@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="tasks.css">
+    <link rel="stylesheet" href="../home.css">
+</head>
+<body>
+    <header>
+        <nav class="header-wrapper">
+            <div class="msg-wrapper">Welcome to our Task management App</div>
+            <!-- Hamburger menu icon -->
+            <div class="hamburger" id="hamburger">
+                &#9776;
+            </div>
+            <ul id="nav-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="/client/about/about.html">About</a></li>
+                <li><a href="/client/tasks/tasks.html">Tasks</a></li>
+                <li><a href="/client/contact/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="task-title">Task Manager</h1>
+        <div class="form-container">
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <input type="text" id="title" placeholder="Title" required>
+                <textarea id="description" placeholder="Description"></textarea>
+                <label>
+                    Completed: <input type="checkbox" id="completed">
+                </label>
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+        <div class="tasks-container">
+            <h2>Tasks</h2>
+            <div>
+                <input type="text" id="search-title" placeholder="Search by title">
+                <select id="search-status">
+                    <option value="">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="not_completed">Not Completed</option>
+                </select>
+                <button id="search-btn">Search</button>
+            </div>
+            <div id="loading">Loading...</div>
+            <ul id="tasks-list"></ul>
+        </div>
+    </div>
+    <footer class="footer-wrapper">
+        <p>&copy; 2024 All rights reserved</p>
+    </footer>
+    <script src="task.js"></script>
+    <script src="../home.js"></script>
+   
+</body>
+</html>

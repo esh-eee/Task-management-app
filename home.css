@@ -1,0 +1,179 @@
+/* Reset some default browser styles */
+body, h1, ul, li, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.welll {
+    height: 100vh;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.header-wrapper {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Make the header fixed */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+header {
+    width: 100%;
+}
+
+header + main {
+    padding-top: 60px; /* Adjust this based on your header height */
+}
+
+.header-wrapper ul {
+    display: flex;
+    justify-content: center;
+}
+
+.header-wrapper li {
+    margin: 0 15px;
+}
+
+.header-wrapper a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.msg-wrapper {
+    font-weight: bold;
+    text-align: center;
+}
+
+.task-descripter {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.hamburger {
+    display: none;
+}
+
+.task-descripter ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.task-descripter ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+.footer-wrapper {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Set position to relative */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-wrapper p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-wrapper ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-wrapper li {
+        margin: 10px 0;
+    }
+
+    .task-descripter {
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        margin-right: 20px;
+    }
+
+    .header-wrapper ul {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #a8a4a4;
+        position: absolute;
+        top: 60px; /* Position below the header */
+        right: 0;
+        width: 25%;
+        opacity: 1;
+        padding: 10px;
+        z-index: 1; /* Ensure it's above other content */
+    }
+
+    .header-wrapper ul.expanded {
+        display: flex; /* Show menu when expanded */
+    }
+
+    .header-wrapper li {
+        width: 100%;
+        text-align: left;
+        margin: 10px 0;
+    }
+
+    .header-wrapper li a {
+        width: 100%;
+        display: block;
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+
+    .header-wrapper ul {
+        display: flex; /* Always show menu on desktop */
+        list-style: none;
+    }
+
+    .header-wrapper ul li {
+        margin: 0 15px;
+    }
+
+    .header-wrapper ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
